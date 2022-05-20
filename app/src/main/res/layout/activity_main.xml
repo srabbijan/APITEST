@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="UVIOM"
+
                 android:textColor="@color/sub_sub_text_color"
                 android:textSize="18sp"
                 android:textStyle="bold"
