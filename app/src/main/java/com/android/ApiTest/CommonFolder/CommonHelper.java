@@ -1,24 +1,20 @@
-package com.android.bongotest.CommonFolder;
+package com.android.ApiTest.CommonFolder;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.widget.Toolbar;
-
-import com.android.bongotest.R;
+import com.android.ApiTest.R;
 
 
 public class CommonHelper {

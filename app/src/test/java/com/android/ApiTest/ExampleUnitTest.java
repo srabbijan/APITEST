@@ -1,4 +1,4 @@
-package com.android.bongotest;
+package com.android.ApiTest;
 
 import org.junit.Test;
 

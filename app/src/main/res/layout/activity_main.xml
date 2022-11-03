@@ -1,52 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/BGD"
+    android:orientation="vertical"
     tools:context=".Screen.MainActivity">
-    <LinearLayout
-        android:id="@+id/topDesign"
-        android:background="@color/card_color"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize">
-        <RelativeLayout
-            android:id="@+id/goToDashboard"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/white"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/BGD"
+        app:boxStrokeColor="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/appTitleId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-
-                android:textColor="@color/sub_sub_text_color"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,TextContrastCheck" />
-        </RelativeLayout>
-
-    </LinearLayout>
     <androidx.core.widget.NestedScrollView
-        android:layout_below="@+id/topDesign"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scroll_view_id">
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_item"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_item"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/row_besttime_profile_list_card"
-                tools:itemCount="5"
-                />
-        </LinearLayout>
+            android:layout_height="match_parent"
+            tools:listitem="@layout/row_data_list_card"
+            tools:itemCount="5"
+            />
     </androidx.core.widget.NestedScrollView>
-</RelativeLayout>
+</LinearLayout>

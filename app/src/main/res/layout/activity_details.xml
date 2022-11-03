@@ -20,7 +20,6 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
-
         android:layout_marginTop="?actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,79 +28,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarId">
         <LinearLayout
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:layout_margin="7dp"
+                    android:layout_margin="5dp"
                     android:id="@+id/posterImage"
                     android:layout_gravity="center"
                     android:layout_width="140dp"
                     android:layout_height="200dp"/>
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_margin="7dp"
+                    android:layout_margin="5dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/title_text"
                         android:textSize="16sp"
-                        android:layout_marginTop="10dp"
                         android:textColor="@color/title_text_color"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/genresTv"
                         android:textSize="14sp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="1dp"
                         android:textColor="@color/sub_title_color"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_below="@+id/title"
+                    <TextView
+                        android:background="@drawable/round_shape2"
+                        android:textColor="@color/title_text_color"
+                        android:id="@+id/release_dateTv"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_star_rate" />
-                        <View
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"/>
-                        <TextView
-                            android:textColor="@color/title_text_color"
-                            android:id="@+id/vote_averageTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="14sp"
-                            />
-                        <View
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"/>
-                        <TextView
-                            android:background="@drawable/round_shape2"
-                            android:textColor="@color/title_text_color"
-                            android:id="@+id/release_dateTv"
-                            android:layout_width="wrap_content"
-                            android:gravity="center"
-                            android:layout_height="wrap_content"
-                            android:minWidth="30dp"
-                            android:padding="2dp"
-                            android:layout_gravity="center"
-                            android:textSize="14sp"
-                            />
-
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:minWidth="30dp"
+                        android:padding="1dp"
+                        android:textSize="14sp" />
                     <LinearLayout
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_below="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -110,65 +78,181 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_time" />
-                        <View
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"/>
+
                         <TextView
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/title_text_color"
                             android:id="@+id/runtimeTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textSize="14sp"
-                            />
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_below="@+id/title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/production_companiesIv"
+                            android:textSize="14sp" />
+                        <ImageView
                             android:layout_gravity="center"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/card_color"/>
-                        <View
-                            android:layout_width="15dp"
-                            android:layout_height="match_parent"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_rate" />
+
                         <TextView
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/title_text_color"
-                            android:id="@+id/production_companiesTv"
+                            android:id="@+id/vote_averageTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             />
-
                     </LinearLayout>
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Actors"
+                        android:textColor="@color/sub_title_color" />
+                    <TextView
+                        android:id="@+id/ActorsTv"
+                        android:textSize="14sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Actors"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/title_text_color" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </LinearLayout>
-            <TextView
-                android:textSize="16sp"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Overview"
-                android:textColor="@color/title_text_color"
-                />
-            <it.mike5v.viewmoretextview.ViewMoreTextView
-                android:id="@+id/overviewTv"
+                android:layout_below="@+id/profileDesign"
+                android:background="@color/card_color"
+                app:tabIndicatorColor="@color/sub_title_color"
+                app:tabSelectedTextColor="@color/sub_title_color"
+                app:tabTextAppearance="@style/TabAppearance">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings" />
+
+
+
+            </com.google.android.material.tabs.TabLayout>
+            <LinearLayout
+                android:id="@+id/infoDesign"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textColor="@color/title_text_color"
-                app:ellipsizeText="More"
-                app:ellipsizeTextColor="@color/sub_title_color"
-                app:duration="100"
-                app:visibleLines="2"
-                app:isExpanded="false"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Director"
+                    android:textColor="@color/title_text_color"
+                    />
+                <TextView
+                    android:id="@+id/DirectorTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Writer"
+                    android:textColor="@color/title_text_color"
+                    />
+                <TextView
+                    android:id="@+id/WriterTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Awards"
+                    android:textColor="@color/title_text_color"
+                    />
+                <TextView
+                    android:id="@+id/AwardsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:textColor="@color/title_text_color"
+                    />
+                <TextView
+                    android:id="@+id/CountryTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textColor="@color/title_text_color"
+                    />
+                <TextView
+                    android:id="@+id/LanguageTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overview"
+                    android:textColor="@color/title_text_color"
+                    />
+                <it.mike5v.viewmoretextview.ViewMoreTextView
+                    android:id="@+id/overviewTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/sub_title_color"
+                    app:ellipsizeText="More"
+                    app:ellipsizeTextColor="@color/title_text_color"
+                    app:duration="100"
+                    app:visibleLines="2"
+                    app:isExpanded="false"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/row_data_list_card"
+                tools:itemCount="5"
                 />
         </LinearLayout>
     </ScrollView>

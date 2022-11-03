@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BongoTest</string>
+    <string name="app_name">ApiTest</string>
     <string name="oops_no_internet_connection">Oops, No internet connection!</string>
     <string name="make_sure_wifi_or_cellular_data_is_turned_on_and_that_retry">Make sure wifi or cellular data is turned on and that retry!</string>
     <string name="retry">Retry</string>
